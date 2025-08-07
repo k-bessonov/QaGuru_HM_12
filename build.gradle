@@ -45,3 +45,16 @@ tasks.withType(Test) {
         }
     }
 }
+
+task demoqa_remote(type: Test) {
+    useJUnitPlatform {
+        includeTags("remote")}
+
+        systemProperties(System.getProperties())
+        testLogging {
+            lifecycle {
+                events "started", "skipped", "failed", "standard_error", "standard_out"
+                exceptionFormat "short"
+            }
+        }
+    }
