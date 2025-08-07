@@ -1,9 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-import helpers.Attach;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
@@ -17,19 +13,9 @@ public class PracticeFormTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
-
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-
-    }
-
     @Test
     void successfulRegistrationTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
 
         step("Открываем сайт с формой", () -> {
             registrationPage.openPage()
