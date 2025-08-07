@@ -4,12 +4,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
+import static data.TestData.*;
 import static io.qameta.allure.Allure.step;
 
-import static data.TestData.*;
-
-@Tag("demoqa")
-public class PracticeFormTests extends TestBase {
+@Tag("remote")
+public class RemotePracticeFormTests extends RemoteTestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
