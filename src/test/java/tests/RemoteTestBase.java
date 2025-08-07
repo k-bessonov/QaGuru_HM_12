@@ -13,7 +13,7 @@ import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class TestBase {
+public class RemoteTestBase {
 
     @BeforeAll
     static void setupConfig() {
@@ -28,7 +28,6 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @BeforeEach

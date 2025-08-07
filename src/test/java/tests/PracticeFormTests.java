@@ -8,8 +8,8 @@ import static io.qameta.allure.Allure.step;
 
 import static data.TestData.*;
 
-@Tag("demoqa")
-public class PracticeFormTests extends TestBase {
+@Tag("remote")
+public class PracticeFormTests extends RemoteTestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
