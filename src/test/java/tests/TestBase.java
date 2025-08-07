@@ -17,8 +17,10 @@ public class TestBase {
 
     @BeforeAll
     static void setupConfig() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com/");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion  = System.getProperty("browserVersion", "128.0");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = "eager";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
