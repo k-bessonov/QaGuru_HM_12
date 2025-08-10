@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "TelegramBot HM13",
+    "environment": "qa.guru",
+    "comment": "comment here @ConstantinBesson",
+    "reportLink": "https://jenkins.autotests.cloud/job/036-ConstantinBesson-unit12/20",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "8300487993:AAG00oEaegMNJulynVWxwW7Aeu9ZjIRN08g",
+    "chat": "-1002808457209",
+    "replyTo": ""
+  }
+}
